@@ -52,9 +52,9 @@ MonoBehaviour:
   coinSpawnChance: 0.3
   coinSeparation: 2
   lanes:
-  - -2.5
+  - -3
   - 0
-  - 2.5
+  - 3
 --- !u!1 &2692336065164826687
 GameObject:
   m_ObjectHideFlags: 0
