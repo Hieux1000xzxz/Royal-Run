@@ -1,13 +1,20 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class Pickup : MonoBehaviour
+public abstract class Pickup : MonoBehaviour
 {
+    private float rotationSpeed = 100f;
     const string playerString = "Player";
+
+    private void Update()
+    {
+        transform.Rotate(0f, rotationSpeed * Time.deltaTime, 0f);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag(playerString))
         {
-            Debug.Log("Item picked up by: " + other.gameObject.name);
+            OnPickup();
             Destroy(gameObject);
         }
         else
@@ -16,4 +23,6 @@ public class Pickup : MonoBehaviour
         }
         Debug.Log("Pickup triggered by: " + other.gameObject.name);
     }
+    protected abstract void OnPickup();
+   
 }
