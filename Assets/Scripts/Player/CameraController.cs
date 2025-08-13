@@ -1,4 +1,4 @@
-using System.Collections;
+  using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -9,14 +9,8 @@ public class CameraController : MonoBehaviour
     [SerializeField] float zoomDuration = 1f;
     [SerializeField] float zoomSpeed = 5f;
     [SerializeField] ParticleSystem particleSystem;
-    CinemachineCamera cinemachineCamera;
+    [SerializeField] CinemachineCamera cinemachineCamera;
 
-
-
-    private void Awake()
-    {
-        cinemachineCamera = FindFirstObjectByType<CinemachineCamera>();
-    }
     public void ChangeCameraFOV(float speedAmout)
     {
         StopAllCoroutines();

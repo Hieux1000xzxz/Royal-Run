@@ -6,13 +6,8 @@ public class PlayerCollisionHandler : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] float collisionCooldown = 1f;
     [SerializeField] float adjustedChangeMoveSpeed = -2f;
-    float cooldownTimer = 0f;
-
-    LevelGenerator levelGenerator;
-    private void Start()
-    {
-        levelGenerator = FindFirstObjectByType<LevelGenerator>();
-    }
+    [SerializeField] LevelGenerator levelGenerator;
+    float cooldownTimer = 0f; 
     private void Update()
     {
         cooldownTimer += Time.deltaTime;

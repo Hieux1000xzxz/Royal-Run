@@ -286,3 +286,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa26b9a03b31ed4cb2cc40802c44488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impulseSource: {fileID: 6284900381962171781}

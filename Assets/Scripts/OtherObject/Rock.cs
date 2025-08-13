@@ -3,12 +3,7 @@ using UnityEngine;
 
 public class Rock : MonoBehaviour
 {
-    CinemachineImpulseSource impulseSource;
-    private void Awake()
-    {
-        impulseSource = GetComponent<CinemachineImpulseSource>();
-    }
-
+    [SerializeField] CinemachineImpulseSource impulseSource;
     private void OnCollisionEnter(Collision collision)
     {
         float distance = Vector3.Distance(transform.position, new Vector3(0, 1, 0));

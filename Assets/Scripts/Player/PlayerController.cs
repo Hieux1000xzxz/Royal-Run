@@ -6,13 +6,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float xClamp = 3f;
     [SerializeField] float zClamp = 4f;
+    [SerializeField] Rigidbody rb;
 
     Vector2 movement;
-    Rigidbody rb;
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+   
     public void Move(InputAction.CallbackContext context)
     {
         movement = context.ReadValue<Vector2>();
